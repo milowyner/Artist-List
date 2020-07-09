@@ -8,7 +8,7 @@
 
 import Foundation
 
-func load(_ filename: String) -> [Artist] {
+func loadFromJSON(_ filename: String) -> [Artist] {
     let data: Data
     
     guard let url = Bundle.main.url(forResource: filename, withExtension: nil) else {
