@@ -8,6 +8,8 @@
 
 import Foundation
 
+let artistData: [Artist] = loadFromJSON("artistData.json")
+
 func loadFromJSON<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
