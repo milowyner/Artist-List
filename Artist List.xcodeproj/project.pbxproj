@@ -89,10 +89,8 @@
 			children = (
 				0524787B24B78849006D7A9A /* AppDelegate.swift */,
 				0524787D24B78849006D7A9A /* SceneDelegate.swift */,
-				0524787F24B78849006D7A9A /* ContentView.swift */,
-				052478D724B7A0BF006D7A9A /* ArtistList.swift */,
-				0524789724B79184006D7A9A /* Data.swift */,
-				0524789124B78E57006D7A9A /* Artist.swift */,
+				052478D924B7A1C0006D7A9A /* Views */,
+				052478DA24B7A1D5006D7A9A /* Model */,
 				0524788F24B78BE2006D7A9A /* artistData.json */,
 				0524788124B7884A006D7A9A /* Assets.xcassets */,
 				0524788624B7884A006D7A9A /* LaunchScreen.storyboard */,
@@ -117,6 +115,24 @@
 				052478A124B7953A006D7A9A /* Info.plist */,
 			);
 			path = "Artist List Tests";
+			sourceTree = "<group>";
+		};
+		052478D924B7A1C0006D7A9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0524787F24B78849006D7A9A /* ContentView.swift */,
+				052478D724B7A0BF006D7A9A /* ArtistList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		052478DA24B7A1D5006D7A9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0524789124B78E57006D7A9A /* Artist.swift */,
+				0524789724B79184006D7A9A /* Data.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
