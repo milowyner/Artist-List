@@ -10,5 +10,59 @@
         "birthYear": 1881,
         "city": "Malaga",
         "country": "Spain"
+    },
+    {
+        "name": "Takashi Murakami",
+        "birthYear": 1962,
+        "city": "Tokyo",
+        "country": "Japan"
+    },
+    {
+        "name": "Claude Monet",
+        "birthYear": 1840,
+        "city": "Paris",
+        "country": "France"
+    },
+    {
+        "name": "Utamaro",
+        "birthYear": 1736,
+        "city": "Edo",
+        "country": "Japan"
+    },
+    {
+        "name": "Frida Kahlo",
+        "birthYear": 1907,
+        "city": "Mexico City",
+        "country": "Mexico"
+    },
+    {
+        "name": "Georgia O’Keeffe",
+        "birthYear": 1887,
+        "city": "Sun Prairie",
+        "country": "United States"
+    },
+    {
+        "name": "Hokusai",
+        "birthYear": 1760,
+        "city": "Edo",
+        "country": "Japan"
+    },
+    {
+        "name": "Paul Gauguin",
+        "birthYear": 1848,
+        "city": "Paris",
+        "country": "France"
+    },
+    {
+        "name": "Jean-Michel Basquiat",
+        "birthYear": 1960,
+        "city": "Brooklyn",
+        "country": "United States"
+    },
+    {
+        "name": "James Jean",
+        "birthYear": 1979,
+        "city": "Taipei",
+        "country": "Taiwan"
     }
 ]
