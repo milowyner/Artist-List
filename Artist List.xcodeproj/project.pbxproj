@@ -13,6 +13,7 @@
 		0524788224B7884A006D7A9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0524788124B7884A006D7A9A /* Assets.xcassets */; };
 		0524788524B7884A006D7A9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0524788424B7884A006D7A9A /* Preview Assets.xcassets */; };
 		0524788824B7884A006D7A9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0524788624B7884A006D7A9A /* LaunchScreen.storyboard */; };
+		0524789024B78BE2006D7A9A /* artistData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0524788F24B78BE2006D7A9A /* artistData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0524788424B7884A006D7A9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0524788724B7884A006D7A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0524788924B7884A006D7A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0524788F24B78BE2006D7A9A /* artistData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = artistData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0524787B24B78849006D7A9A /* AppDelegate.swift */,
 				0524787D24B78849006D7A9A /* SceneDelegate.swift */,
 				0524787F24B78849006D7A9A /* ContentView.swift */,
+				0524788F24B78BE2006D7A9A /* artistData.json */,
 				0524788124B7884A006D7A9A /* Assets.xcassets */,
 				0524788624B7884A006D7A9A /* LaunchScreen.storyboard */,
 				0524788924B7884A006D7A9A /* Info.plist */,
@@ -133,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0524789024B78BE2006D7A9A /* artistData.json in Resources */,
 				0524788824B7884A006D7A9A /* LaunchScreen.storyboard in Resources */,
 				0524788524B7884A006D7A9A /* Preview Assets.xcassets in Resources */,
 				0524788224B7884A006D7A9A /* Assets.xcassets in Resources */,

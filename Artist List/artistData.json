@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Vincent Van Gogh",
+        "birthYear": 1853,
+        "city": "Zundert",
+        "country": "The Netherlands"
+    },
+    {
+        "name": "Pablo Picasso",
+        "birthYear": 1881,
+        "city": "Malaga",
+        "country": "Spain"
+    }
+]
