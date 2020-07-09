@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Artist {
+struct Artist: Codable {
     let name: String
     let birthYear: Int
     let city: String
