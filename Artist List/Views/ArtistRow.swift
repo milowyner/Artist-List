@@ -16,14 +16,15 @@ struct ArtistRow: View {
         VStack(spacing: 8) {
             HStack {
                 Text(artist.name)
+                    .font(.system(size: 20, weight: .medium))
                 Spacer()
             }
             HStack {
                 Text("Born")
-                .foregroundColor(.secondary)
+                    .foregroundColor(.secondary)
                 Text(String(format: "%d", artist.birthYear))
                 Text("in")
-                .foregroundColor(.secondary)
+                    .foregroundColor(.secondary)
                 Text("\(artist.city), \(artist.country)")
                 Spacer()
             }
