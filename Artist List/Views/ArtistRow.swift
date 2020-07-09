@@ -29,7 +29,7 @@ struct ArtistRow: View {
                 Spacer()
             }
         }
-        .padding(16)
+        .padding([.top, .bottom], 8)
     }
 }
 

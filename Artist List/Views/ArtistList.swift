@@ -10,9 +10,8 @@ import SwiftUI
 
 struct ArtistList: View {
     var body: some View {
-        List {
-            Text(artistData[0].name)
-            Text(artistData[1].name)
+        List(artistData) { artist in
+            ArtistRow(artist: artist)
         }
     }
 }

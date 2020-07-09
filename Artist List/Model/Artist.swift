@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct Artist: Codable {
+struct Artist: Codable, Identifiable {
+    let id = UUID()
+    
     let name: String
     let birthYear: Int
     let city: String
