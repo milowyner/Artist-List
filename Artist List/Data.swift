@@ -8,7 +8,7 @@
 
 import Foundation
 
-func loadFromJSON(_ filename: String) -> [Artist] {
+func loadFromJSON<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let url = Bundle.main.url(forResource: filename, withExtension: nil) else {
@@ -23,7 +23,7 @@ func loadFromJSON(_ filename: String) -> [Artist] {
     
     do {
         let decoder = JSONDecoder()
-        return try decoder.decode([Artist].self, from: data)
+        return try decoder.decode(T.self, from: data)
     } catch {
         fatalError("Couldn't decode data from \(filename) as \([Artist].self): \(error)")
     }
