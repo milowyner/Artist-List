@@ -13,7 +13,22 @@ struct ArtistRow: View {
     let artist: Artist
     
     var body: some View {
-        Text(artist.name)
+        VStack(spacing: 8) {
+            HStack {
+                Text(artist.name)
+                Spacer()
+            }
+            HStack {
+                Text("Born")
+                .foregroundColor(.secondary)
+                Text(String(format: "%d", artist.birthYear))
+                Text("in")
+                .foregroundColor(.secondary)
+                Text("\(artist.city), \(artist.country)")
+                Spacer()
+            }
+        }
+        .padding(16)
     }
 }
 
