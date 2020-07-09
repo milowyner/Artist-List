@@ -9,8 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var addButton: some View {
+        Button(action: {}) {
+            Image(systemName: "plus")
+            Text("Add Artist")
+        }
+    }
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            ArtistList()
+                .navigationBarTitle("Artist List")
+                .navigationBarItems(trailing: addButton)
+        }
     }
 }
 
