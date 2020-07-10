@@ -10,10 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var addArtistViewIsPresented = false
+    
     var addButton: some View {
-        Button(action: {}) {
+        Button(action: {
+            self.addArtistViewIsPresented = true
+        }) {
             Image(systemName: "plus")
             Text("Add Artist")
+        }
+        .sheet(isPresented: $addArtistViewIsPresented) {
+            AddArtistView(isPresented: self.$addArtistViewIsPresented)
         }
     }
     

@@ -10,6 +10,8 @@ import SwiftUI
 
 struct AddArtistView: View {
     
+    @Binding var isPresented: Bool
+    
     @State var name = ""
     @State var birthYear = ""
     @State var city = ""
@@ -21,7 +23,9 @@ struct AddArtistView: View {
         VStack(spacing: 16) {
             HStack {
                 Spacer()
-                Button(action: {}) {
+                Button(action: {
+                    self.isPresented = false
+                }) {
                     Text("Cancel")
                 }
                 .padding()
@@ -59,6 +63,6 @@ struct AddArtistView: View {
 
 struct AddArtistView_Previews: PreviewProvider {
     static var previews: some View {
-        AddArtistView()
+        AddArtistView(isPresented: .constant(true))
     }
 }
