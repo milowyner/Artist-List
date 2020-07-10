@@ -11,6 +11,7 @@ import SwiftUI
 struct AddArtistView: View {
     
     @Binding var isPresented: Bool
+    @Binding var artistList: [Artist]
     
     @State var name = ""
     @State var birthYear = ""
@@ -21,6 +22,8 @@ struct AddArtistView: View {
     
     var body: some View {
         VStack(spacing: 16) {
+            
+            // Cancel button
             HStack {
                 Spacer()
                 Button(action: {
@@ -31,6 +34,7 @@ struct AddArtistView: View {
                 .padding()
             }
             
+            // Title
             Text("Add a New Artist")
                 .font(.title)
             
@@ -53,7 +57,13 @@ struct AddArtistView: View {
             .padding()
             Spacer()
             
-            Button(action: {}) {
+            // Save Artist button
+            Button(action: {
+                // TODO: Validate birthYear is actually an Int
+                let newArtist = Artist(name: self.name, birthYear: Int(self.birthYear)!, city: self.city, country: self.country)
+                self.artistList.insert(newArtist, at: 0)
+                self.isPresented = false
+            }) {
                 Text("Save Artist")
             }
             .padding()
@@ -63,6 +73,6 @@ struct AddArtistView: View {
 
 struct AddArtistView_Previews: PreviewProvider {
     static var previews: some View {
-        AddArtistView(isPresented: .constant(true))
+        AddArtistView(isPresented: .constant(true), artistList: .constant([]))
     }
 }

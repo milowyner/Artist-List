@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var addArtistViewIsPresented = false
+    @State var artists = artistData
     
     var addButton: some View {
         Button(action: {
@@ -20,13 +21,15 @@ struct ContentView: View {
             Text("Add Artist")
         }
         .sheet(isPresented: $addArtistViewIsPresented) {
-            AddArtistView(isPresented: self.$addArtistViewIsPresented)
+            AddArtistView(isPresented: self.$addArtistViewIsPresented, artistList: self.$artists)
         }
     }
     
     var body: some View {
         NavigationView {
-            ArtistList()
+            List(artists) { artist in
+                ArtistRow(artist: artist)
+            }
                 .navigationBarTitle("Artist List")
                 .navigationBarItems(trailing: addButton)
         }
