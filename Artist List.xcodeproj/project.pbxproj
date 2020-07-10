@@ -19,6 +19,7 @@
 		052478A024B7953A006D7A9A /* Artist_List_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0524789F24B7953A006D7A9A /* Artist_List_Tests.swift */; };
 		052478D824B7A0BF006D7A9A /* ArtistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052478D724B7A0BF006D7A9A /* ArtistList.swift */; };
 		052478DC24B7A292006D7A9A /* ArtistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052478DB24B7A292006D7A9A /* ArtistRow.swift */; };
+		05DACBB824B7D48200B0688F /* AddArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DACBB724B7D48200B0688F /* AddArtistView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		052478A124B7953A006D7A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		052478D724B7A0BF006D7A9A /* ArtistList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistList.swift; sourceTree = "<group>"; };
 		052478DB24B7A292006D7A9A /* ArtistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRow.swift; sourceTree = "<group>"; };
+		05DACBB724B7D48200B0688F /* AddArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArtistView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				0524787F24B78849006D7A9A /* ContentView.swift */,
 				052478D724B7A0BF006D7A9A /* ArtistList.swift */,
 				052478DB24B7A292006D7A9A /* ArtistRow.swift */,
+				05DACBB724B7D48200B0688F /* AddArtistView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				052478DC24B7A292006D7A9A /* ArtistRow.swift in Sources */,
+				05DACBB824B7D48200B0688F /* AddArtistView.swift in Sources */,
 				052478D824B7A0BF006D7A9A /* ArtistList.swift in Sources */,
 				0524787C24B78849006D7A9A /* AppDelegate.swift in Sources */,
 				0524789824B79184006D7A9A /* Data.swift in Sources */,
