@@ -62,6 +62,7 @@ struct AddArtistView: View {
                 // TODO: Validate birthYear is actually an Int
                 let newArtist = Artist(name: self.name, birthYear: Int(self.birthYear)!, city: self.city, country: self.country)
                 self.artistList.insert(newArtist, at: 0)
+                self.artistList.save()
                 self.isPresented = false
             }) {
                 Text("Save Artist")

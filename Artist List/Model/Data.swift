@@ -27,6 +27,35 @@ func loadFromJSON<T: Decodable>(_ filename: String) -> T {
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from: data)
     } catch {
-        fatalError("Couldn't decode data from \(filename) as \([Artist].self): \(error)")
+        fatalError("Couldn't decode data from \(filename) as \(T.self): \(error)")
+    }
+}
+
+func saveToJSON<T: Encodable>(_ filename: String, data: T) {
+    let encodedData: Data
+    
+    guard let url = Bundle.main.url(forResource: filename, withExtension: nil) else {
+        fatalError("Couldn't find \(filename) in main bundle.")
+    }
+    
+    do {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        
+        encodedData = try encoder.encode(data)
+    } catch {
+        fatalError("Couldn't encode \(T.self): \(error)")
+    }
+    
+    do {
+        try encodedData.write(to: url)
+    } catch {
+        fatalError("Couldn't write \(T.self) data to \(filename): \(error)")
+    }
+}
+
+extension Array where Element == Artist {
+    func save() {
+        saveToJSON("artistData.json", data: self)
     }
 }
