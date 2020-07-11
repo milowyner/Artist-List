@@ -13,6 +13,18 @@ struct ArtistList: View {
     @State var addArtistViewIsPresented = false
     @State var artists = artistData
     
+    struct ButtonStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+                .font(.system(size: 15, weight: .semibold))
+                .padding([.top, .bottom], 6)
+                .padding([.leading, .trailing], 8)
+                .accentColor(.blue)
+                .background(Color.blue.saturation(0.5).opacity(0.1))
+                .cornerRadius(10)
+        }
+    }
+    
     var addButton: some View {
         Button(action: {
             self.addArtistViewIsPresented = true
@@ -20,6 +32,7 @@ struct ArtistList: View {
             Image(systemName: "plus")
             Text("Add Artist")
         }
+        .modifier(ButtonStyle())
         .sheet(isPresented: $addArtistViewIsPresented) {
             AddArtistView(isPresented: self.$addArtistViewIsPresented, artistList: self.$artists)
         }
@@ -37,7 +50,7 @@ struct ArtistList: View {
                 .onDelete(perform: delete(at:))
             }
             .navigationBarTitle("Artist List")
-            .navigationBarItems(leading: EditButton(), trailing: addButton)
+            .navigationBarItems(leading: EditButton().modifier(ButtonStyle()), trailing: addButton)
         }
     }
     
