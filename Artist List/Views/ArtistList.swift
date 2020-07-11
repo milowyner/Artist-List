@@ -25,14 +25,33 @@ struct ArtistList: View {
         }
     }
     
+    // MARK: - Body
+    
     var body: some View {
         NavigationView {
-            List(artists) { artist in
-                ArtistRow(artist: artist)
+            List {
+                ForEach(artists) { artist in
+                    ArtistRow(artist: artist)
+                }
+                .onMove(perform: move(from:to:))
+                .onDelete(perform: delete(at:))
             }
-                .navigationBarTitle("Artist List")
-                .navigationBarItems(trailing: addButton)
+            .navigationBarTitle("Artist List")
+            .navigationBarItems(leading: EditButton(), trailing: addButton)
         }
+    }
+    
+    // MARK: - Editing the list
+    
+    func move(from source: IndexSet, to destination: Int) {
+        print("Move")
+        artists.move(fromOffsets: source, toOffset: destination)
+        artists.save()
+    }
+    
+    func delete(at offsets: IndexSet) {
+        artists.remove(atOffsets: offsets)
+        artists.save()
     }
 }
 
