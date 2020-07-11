@@ -44,7 +44,9 @@ struct ArtistList: View {
     // MARK: - Editing the list
     
     func move(from source: IndexSet, to destination: Int) {
-        print("Move")
+        // TODO: Fix bug where the cells of artists with longer city/country names
+        //       only expand when moved, and stay expanded after leaving edit mode
+        
         artists.move(fromOffsets: source, toOffset: destination)
         artists.save()
     }
