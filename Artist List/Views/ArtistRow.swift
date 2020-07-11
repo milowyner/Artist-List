@@ -20,12 +20,12 @@ struct ArtistRow: View {
                 Spacer()
             }
             HStack {
-                Text("Born")
+                Text("Born ")
                     .foregroundColor(.secondary)
-                Text(String(format: "%d", artist.birthYear))
-                Text("in")
+                + Text(String(format: "%d", artist.birthYear))
+                + Text(" in ")
                     .foregroundColor(.secondary)
-                Text("\(artist.city), \(artist.country)")
+                + Text("\(artist.city), \(artist.country)")
                 Spacer()
             }
         }
@@ -35,6 +35,6 @@ struct ArtistRow: View {
 
 struct ArtistRow_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistRow(artist: artistData[0]).previewLayout(.fixed(width: 375, height: 80))
+        ArtistRow(artist: artistData[0]).previewLayout(.sizeThatFits)
     }
 }
