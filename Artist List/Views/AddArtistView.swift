@@ -18,10 +18,16 @@ struct AddArtistView: View {
     @State var city = ""
     @State var country = ""
     
+    // Used so that an artist can only be added when all the info is filled in and validated
+    var saveArtistDisabled: Bool {
+        name.isEmpty || birthYear.isEmpty || city.isEmpty || country.isEmpty
+            || Int(birthYear) == nil
+    }
+    
     let rowHeight: CGFloat = 50
     
     var body: some View {
-        VStack(spacing: 16) {
+        VStack() {
             
             // Cancel button
             HStack {
@@ -31,12 +37,14 @@ struct AddArtistView: View {
                 }) {
                     Text("Cancel")
                 }
+                .modifier(SmallButtonStyle())
                 .padding()
             }
             
             // Title
             Text("Add a New Artist")
                 .font(.title)
+                .bold()
             
             // Input rows
             HStack(spacing: 16) {
@@ -46,6 +54,7 @@ struct AddArtistView: View {
                     Text("City:").frame(height: rowHeight)
                     Text("Country:").frame(height: rowHeight)
                 }
+                .font(.system(size: 17, weight: .medium))
                 VStack(spacing: 0) {
                     TextField("", text: $name).frame(height: rowHeight)
                     TextField("", text: $birthYear).frame(height: rowHeight)
@@ -59,7 +68,7 @@ struct AddArtistView: View {
             
             // Save Artist button
             Button(action: {
-                // TODO: Validate birthYear is actually an Int
+                // saveArtistDisabled makes sure birthYear is an Int before this is run
                 let newArtist = Artist(name: self.name, birthYear: Int(self.birthYear)!, city: self.city, country: self.country)
                 self.artistList.insert(newArtist, at: 0)
                 self.artistList.save()
@@ -67,6 +76,8 @@ struct AddArtistView: View {
             }) {
                 Text("Save Artist")
             }
+            .disabled(saveArtistDisabled)
+            .modifier(LargeButtonStyle(disabled: saveArtistDisabled))
             .padding()
         }
     }

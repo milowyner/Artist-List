@@ -18,6 +18,7 @@
 		0524789824B79184006D7A9A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0524789724B79184006D7A9A /* Data.swift */; };
 		052478A024B7953A006D7A9A /* Artist_List_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0524789F24B7953A006D7A9A /* Artist_List_Tests.swift */; };
 		052478DC24B7A292006D7A9A /* ArtistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052478DB24B7A292006D7A9A /* ArtistRow.swift */; };
+		0547920E24B97B13001149AF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547920D24B97B13001149AF /* Styles.swift */; };
 		05DACBB824B7D48200B0688F /* AddArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DACBB724B7D48200B0688F /* AddArtistView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		0524789F24B7953A006D7A9A /* Artist_List_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist_List_Tests.swift; sourceTree = "<group>"; };
 		052478A124B7953A006D7A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		052478DB24B7A292006D7A9A /* ArtistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRow.swift; sourceTree = "<group>"; };
+		0547920D24B97B13001149AF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		05DACBB724B7D48200B0688F /* AddArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArtistView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				0524787F24B78849006D7A9A /* ArtistList.swift */,
 				052478DB24B7A292006D7A9A /* ArtistRow.swift */,
 				05DACBB724B7D48200B0688F /* AddArtistView.swift */,
+				0547920D24B97B13001149AF /* Styles.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				052478DC24B7A292006D7A9A /* ArtistRow.swift in Sources */,
+				0547920E24B97B13001149AF /* Styles.swift in Sources */,
 				05DACBB824B7D48200B0688F /* AddArtistView.swift in Sources */,
 				0524787C24B78849006D7A9A /* AppDelegate.swift in Sources */,
 				0524789824B79184006D7A9A /* Data.swift in Sources */,
