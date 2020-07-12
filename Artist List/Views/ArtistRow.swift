@@ -16,8 +16,7 @@ struct ArtistRow: View {
         VStack(spacing: 8) {
             HStack {
                 Text(artist.name)
-                    .font(.system(size: 17, weight: .semibold))
-                    .foregroundColor(Color("ArtistName"))
+                    .font(.system(size: 19, weight: .semibold))
                 Spacer()
             }
             HStack {
@@ -33,7 +32,7 @@ struct ArtistRow: View {
             }
             .font(.system(size: 15, weight: .medium))
         }
-        .padding([.top, .bottom], 6)
+        .padding([.top, .bottom], 8)
     }
 }
 

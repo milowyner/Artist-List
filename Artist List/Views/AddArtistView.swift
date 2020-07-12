@@ -47,7 +47,9 @@ struct AddArtistView: View {
                 .bold()
             
             // Input rows
+            // The reason for doing an HStack containing two VStacks is so that the TextFields all line up
             HStack(spacing: 16) {
+                // I have to manually add the rowheight to each Text and TextField so that they stay on the same row
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Name:").frame(height: rowHeight)
                     Text("Birth Year:").frame(height: rowHeight)
@@ -56,10 +58,10 @@ struct AddArtistView: View {
                 }
                 .font(.system(size: 17, weight: .medium))
                 VStack(spacing: 0) {
-                    TextField("", text: $name).frame(height: rowHeight)
-                    TextField("", text: $birthYear).frame(height: rowHeight)
-                    TextField("", text: $city).frame(height: rowHeight)
-                    TextField("", text: $country).frame(height: rowHeight)
+                    TextField("Pablo Picasso", text: $name).frame(height: rowHeight)
+                    TextField("1881", text: $birthYear).frame(height: rowHeight)
+                    TextField("Malaga", text: $city).frame(height: rowHeight)
+                    TextField("Spain", text: $country).frame(height: rowHeight)
                 }
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             }
